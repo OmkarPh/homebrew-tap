@@ -5,20 +5,20 @@
 class RedisServerLite < Formula
   desc "A lightweight Redis server implementation in Go."
   homepage "https://github.com/OmkarPh/redis-server-lite"
-  version "0.1"
+  version "0.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.1/redis-server-lite_0.1_darwin_arm64.tar.gz"
-      sha256 "05d009eb0fb424532740054a1732d43dfe9bf8bc5ce7ee67f9e6168888c5a696"
+      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.2/redis-server-lite_0.2_darwin_arm64.tar.gz"
+      sha256 "d8a5d2baad2dc31b4906102af821e36b589d3ef2f02997560ab88d6441a00441"
 
       def install
         bin.install "redis-server-lite"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.1/redis-server-lite_0.1_darwin_amd64.tar.gz"
-      sha256 "90cd4f2163d91f9d35d230baa875338d020b17f861f6c63efe504b50ffadd1f3"
+      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.2/redis-server-lite_0.2_darwin_amd64.tar.gz"
+      sha256 "25d5f5b3b52a57c247fb9643f73c9e4d3f6c72e357cf0d63df98615aeef38e05"
 
       def install
         bin.install "redis-server-lite"
@@ -28,16 +28,16 @@ class RedisServerLite < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.1/redis-server-lite_0.1_linux_arm64.tar.gz"
-      sha256 "518920ab520434e3ee5ef8595126e6e4849fa0fb3d8a887428b222fdd733801e"
+      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.2/redis-server-lite_0.2_linux_arm64.tar.gz"
+      sha256 "67c0abd6e1906393cf29fda70bc9ff1d6f4dbf7b75eefe9874e10e8ccc138922"
 
       def install
         bin.install "redis-server-lite"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.1/redis-server-lite_0.1_linux_amd64.tar.gz"
-      sha256 "f6d39173d17848c4614573094e19fe1698f73cbadbf83428dffcbecdcde9ef04"
+      url "https://github.com/OmkarPh/redis-server-lite/releases/download/v0.2/redis-server-lite_0.2_linux_amd64.tar.gz"
+      sha256 "504d464b87630379eb176ef56c028e0d8511c432bbb9980c757bf046bffcd66b"
 
       def install
         bin.install "redis-server-lite"
